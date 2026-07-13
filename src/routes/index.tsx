@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { useReveal } from "@/hooks/use-reveal";
+import { useLenis } from "@/hooks/use-lenis";
 import heroEmbers from "@/assets/hero-embers.jpg";
 import dishBurrata from "@/assets/dish-burrata.jpg";
 import dishGrill from "@/assets/dish-grill.jpg";
@@ -36,6 +37,7 @@ const dishes = [
 ];
 
 function Landing() {
+  useLenis();
   const [scrolled, setScrolled] = useState(false);
   const heroImgRef = useRef<HTMLDivElement | null>(null);
 
